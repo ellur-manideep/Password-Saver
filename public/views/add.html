@@ -1,0 +1,31 @@
+<div>
+<md-content layout-padding>
+    <form name="projectForm">
+      <div layout="column">
+        <md-input-container flex="50">
+          <label>Website Name</label>
+          <input required name="webSite" ng-model="project.webSiteName">
+          <div ng-messages="projectForm.webSite.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+        <br>
+        <md-input-container flex="50">
+          <label>UserName/Email-ID</label>
+          <input required name="userName" ng-model="project.userName">
+          <div ng-messages="projectForm.userName.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+        <br>
+        <md-input-container flex="50">
+          <label>Password</label>
+          <input required name="pwd" ng-model="project.password">
+          <div ng-messages="projectForm.pwd.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+      </form>
+      <md-button class="md-raised md-primary" ng-click="insert(project.webSiteName, project.userName, project.password)">Add</md-button>
+  </md-content>
+</div>
